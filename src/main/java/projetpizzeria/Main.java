@@ -10,9 +10,9 @@ public class Main {
 
         if (connection != null) {
         	 new PageAcceuil().setVisible(true);
-            System.out.println("Application Pizzeria démarrée avec succès !");
+            System.out.println("Application Pizzeria dÃ©marrÃ©e avec succÃ¨s !");
         } else {
-            System.out.println("Échec de la connexion à la base de données.");
+            System.out.println("Ã‰chec de la connexion Ã  la base de donnÃ©es.");
         }
     }
 }

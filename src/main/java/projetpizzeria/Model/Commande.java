@@ -1,6 +1,9 @@
 package projetpizzeria.Model;
 
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class Commande {
     private String idCommande;
@@ -39,7 +42,7 @@ public class Commande {
 
     // Setter pour dateCommande
     public void setDateCommande(String dateCommande) {
-        this.dateCommande = dateCommande;
+        this.dateCommande = convertToFrenchDate(dateCommande);
     }
 
     // Getter pour bonusPizzaGratuite
@@ -90,5 +93,17 @@ public class Commande {
     // Setter pour idPizza
     public void setIdPizza(String idPizza) {
         this.idPizza = idPizza;
+    }
+
+    private String convertToFrenchDate(String dateCommande) {
+        SimpleDateFormat englishFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.ENGLISH);
+        SimpleDateFormat frenchFormat = new SimpleDateFormat("dd MMMM yyyy HH:mm", Locale.FRENCH);
+        try {
+            Date date = englishFormat.parse(dateCommande);
+            return frenchFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return dateCommande; 
+        }
     }
 }

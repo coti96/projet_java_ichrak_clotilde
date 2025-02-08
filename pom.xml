@@ -5,7 +5,7 @@
     <groupId>fr.pizzeriaclotildeichrak</groupId>
     <artifactId>projetpizzeria</artifactId>
     <version>0.0.1-SNAPSHOT</version>
- 
+
     <!--  Dépendances ici -->
     <dependencies>
         <!-- Dépendance pour le pilote JDBC MySQL -->
@@ -17,4 +17,3 @@
         <!-- Autres dépendances si nécessaire -->
     </dependencies>
 </project>
- 
